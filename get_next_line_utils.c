@@ -6,7 +6,7 @@
 /*   By: aokubo <aokubo@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 02:02:04 by aokubo            #+#    #+#             */
-/*   Updated: 2022/03/16 17:37:21 by aokubo           ###   ########.fr       */
+/*   Updated: 2022/03/26 15:21:30 by aokubo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ char	*ft_substr_gnl(char *s, unsigned int start, size_t len)
 	size_s = 0;
 	while (s[size_s] != '\0')
 		size_s++;
-	if (start + len > size_s)
+	if (len > size_s || start > size_s - len)
 	{
 		if (start < size_s)
 			len = size_s - start;
