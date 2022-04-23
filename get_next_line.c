@@ -6,7 +6,7 @@
 /*   By: aokubo <aokubo@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 18:06:50 by aokubo            #+#    #+#             */
-/*   Updated: 2022/03/16 17:37:26 by aokubo           ###   ########.fr       */
+/*   Updated: 2022/04/24 05:05:22 by aokubo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_read_file_gnl(char *pre_str, int fd)
 		str_read = (char *)malloc(sizeof(char) * ((size_t)BUFFER_SIZE + 1));
 		if (str_read != NULL)
 			str_read[0] = '\0';
-		read_size = read(fd, str_read, BUFFER_SIZE);
+		read_size = read(fd, str_read, (size_t)BUFFER_SIZE);
 		if (read_size != -1)
 			str_read[read_size] = '\0';
 		pre_str = ft_strjoin_gnl(pre_str, str_read, true, true);
